@@ -1,8 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router';
 
-const PhoneCard = ({data}) => {
-    const {name,image,description} = data || {};
+const PhoneCard = ({phone}) => {
+    const {name,image,description} = phone || {};
     return (
       <div className="card bg-base-100 w-96 shadow-sm">
   <figure>

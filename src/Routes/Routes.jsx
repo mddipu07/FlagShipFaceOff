@@ -17,6 +17,7 @@ import Favourite from "../Pages/Favourite";
      {
     index:true,
      element:<Home></Home>,
+     hydrateFallbackElement: <p>Loading...</p>,
      loader: () => fetch('phones.json')
     },
     {
