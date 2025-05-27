@@ -18,15 +18,17 @@ import Favourite from "../Pages/Favourite";
     index:true,
      element:<Home></Home>,
      hydrateFallbackElement: <p>Loading...</p>,
-     loader: () => fetch('phones.json')
+     loader: () => fetch('../phones.json')
     },
     {
     path:'/about',
     element:<About></About>
    },
    {
-    path:'/phone-details',
-    element: <PhoneDetails></PhoneDetails>
+    path:'/phone-details/:id',
+    element: <PhoneDetails></PhoneDetails>,
+     hydrateFallbackElement: <p>Loading...</p>,
+    loader: () => fetch('../phones.json')
    },
    {
     path:'/favourite',
